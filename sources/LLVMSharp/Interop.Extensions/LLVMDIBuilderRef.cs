@@ -101,6 +101,16 @@ namespace LLVMSharp.Interop
             return LLVM.DIBuilderCreateTypedef(this, Type, marshaledName, (UIntPtr)nameLength, File, LineNo, Scope, AlignInBits);
         }
 
+        public static LLVMMetadataRef GetSubprogram(LLVMValueRef Function)
+        {
+            return LLVM.GetSubprogram(Function);
+        }
+
+        public static void SetSubprogram(LLVMValueRef Function, LLVMMetadataRef Type)
+        {
+            LLVM.SetSubprogram(Function, Type);
+        }
+
         public void DIBuilderFinalize()
         {
             LLVM.DIBuilderFinalize(this);
