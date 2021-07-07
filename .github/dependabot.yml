@@ -1,0 +1,102 @@
+version: 2
+updates:
+  - package-ecosystem: 'nuget'
+    directory: 'samples/KaleidoscopeTutorial/Chapter3/Kaleidoscope'
+    open-pull-requests-limit: 10
+    schedule:
+      interval: 'daily'
+    # target-branch: 'develop'
+    # assignees:
+    #   - assignee_one
+    # reviewers:
+    #   - reviewer_one
+
+  - package-ecosystem: 'nuget'
+    directory: 'samples/KaleidoscopeTutorial/Chapter3/KaleidoscopeLLVM'
+    open-pull-requests-limit: 10
+    schedule:
+      interval: 'daily'
+    # target-branch: 'develop'
+    # assignees:
+    #   - assignee_one
+    # reviewers:
+    #   - reviewer_one
+
+  - package-ecosystem: 'nuget'
+    directory: 'samples/KaleidoscopeTutorial/Chapter4/Kaleidoscope'
+    open-pull-requests-limit: 10
+    schedule:
+      interval: 'daily'
+    # target-branch: 'develop'
+    # assignees:
+    #   - assignee_one
+    # reviewers:
+    #   - reviewer_one
+
+  - package-ecosystem: 'nuget'
+    directory: 'samples/KaleidoscopeTutorial/Chapter4/KaleidoscopeLLVM'
+    open-pull-requests-limit: 10
+    schedule:
+      interval: 'daily'
+    # target-branch: 'develop'
+    # assignees:
+    #   - assignee_one
+    # reviewers:
+    #   - reviewer_one
+
+  - package-ecosystem: 'nuget'
+    directory: 'samples/KaleidoscopeTutorial/Chapter5/Kaleidoscope'
+    open-pull-requests-limit: 10
+    schedule:
+      interval: 'daily'
+    # target-branch: 'develop'
+    # assignees:
+    #   - assignee_one
+    # reviewers:
+    #   - reviewer_one
+
+  - package-ecosystem: 'nuget'
+    directory: 'samples/KaleidoscopeTutorial/Chapter5/KaleidoscopeLLVM'
+    open-pull-requests-limit: 10
+    schedule:
+      interval: 'daily'
+    # target-branch: 'develop'
+    # assignees:
+    #   - assignee_one
+    # reviewers:
+    #   - reviewer_one
+
+  - package-ecosystem: 'nuget'
+    directory: 'sources/LLVMSharp'
+    open-pull-requests-limit: 10
+    schedule:
+      interval: 'daily'
+    # target-branch: 'develop'
+    # assignees:
+    #   - assignee_one
+    # reviewers:
+    #   - reviewer_one
+
+  - package-ecosystem: 'nuget'
+    directory: 'sources/LLVMSharp.Interop'
+    open-pull-requests-limit: 10
+    schedule:
+      interval: 'daily'
+    # target-branch: 'develop'
+    # assignees:
+    #   - assignee_one
+    # reviewers:
+    #   - reviewer_one
+
+  - package-ecosystem: 'nuget'
+    directory: 'tests/LLVMSharp.UnitTests'
+    open-pull-requests-limit: 10
+    schedule:
+      interval: 'daily'
+    # target-branch: 'develop'
+    # assignees:
+    #   - assignee_one
+    # reviewers:
+    #   - reviewer_one
+
+# Built with ❤ by [Pipeline Foundation](https://pipeline.foundation)
