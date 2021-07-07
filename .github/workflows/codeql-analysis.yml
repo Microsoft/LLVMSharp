@@ -1,0 +1,50 @@
+name: CodeQL Analysis
+
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: '0 8 * * *'
+  workflow_dispatch:
+
+jobs:
+  analyze:
+    name: Analyze
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup latest .NET Core 3.1
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 3.1.410
+
+      - name: Setup latest .NET 5.0
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 5.0.301
+
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v1
+        with:
+          queries: security-and-quality
+
+      - name: Build solution
+        shell: pwsh
+        run: |
+          dotnet sln LLVMSharp.sln remove tests/LLVMSharp.UnitTests/LLVMSharp.UnitTests.csproj
+
+          dotnet clean LLVMSharp.sln --configuration Release
+
+          dotnet restore LLVMSharp.sln
+
+          dotnet build LLVMSharp.sln `
+          --configuration Release `
+          --no-incremental `
+          -property:UseSharedCompilation=false
+
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v1
+
+# Built with ❤ by [Pipeline Foundation](https://pipeline.foundation)
